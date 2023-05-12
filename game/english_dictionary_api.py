@@ -1,5 +1,5 @@
 """Contains logic for connectin to an english language api used for the game so it can access words.
-It uses the api from https://rapidapi.com/uiopuiop3385/api/random-word-api"""
+It uses the api from https://rapidapi.com/uiopuiopuiop3385/api/random-word-api"""
 import requests
 import os
 
