@@ -33,7 +33,7 @@ class WordChainingGame:
             self.computed_word = eng_dict.get_random_word()
 
         # because computer has added its own word
-        self.chaint_count += 1
+        self.chain_count += 1
         print(self.computed_word)
 
     """Checks the player's input and makes sure the input is valid.
@@ -62,4 +62,4 @@ class WordChainingGame:
     """
     Prints the player's score"""
     def end_game(self):
-        print("ended with a china {} words long".format(self.chain_count))
+        print("ended with a chain {} words long".format(self.chain_count))

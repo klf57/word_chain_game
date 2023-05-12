@@ -16,7 +16,7 @@ def get_word_matching_letter(first_letter):
 
     response = requests.get(url, headers=headers)
     # convert content to dictionary
-    word_dict = response.json
+    word_dict = response.json()
     return word_dict.get('word')
 
 
