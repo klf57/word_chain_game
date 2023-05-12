@@ -6,7 +6,7 @@ import os
 """Always returns a valid English word that will start with given letter."""
 def get_word_matching_letter(first_letter):
 
-    url = 'https://random-word-api.p.rapidapi.com'.format(first_letter)
+    url = 'https://random-word-api.p.rapidapi.com/S/{}'.format(first_letter)
 
     #required to gain access to api.
     headers = {
@@ -15,6 +15,23 @@ def get_word_matching_letter(first_letter):
     }
 
     response = requests.get(url, headers=headers)
+    # convert content to dictionary
+    word_dict = response.json
+    return word_dict.get('word')
+
+
+def get_random_word():
+    url = 'https://random-word-api.p.rapidapi.com/get_word'
+
+    headers = {
+        "X-RapidAPI-Key": os.getenv("API_KEY"),
+        "X-RapidAPI-Host": "random-word-api.p.rapidapi.com"
+    }
+
+    response = requests.get(url, headers = headers)
+    # convert content to dictionary
+    word_dict = response.json()
+    return word_dict.get('word')
 
 
 
