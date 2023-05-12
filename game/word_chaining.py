@@ -25,12 +25,15 @@ class WordChainingGame:
     Retrieves a new word that matches the last letter of previous word.
     """
     def prepare_next_round(self):
+
+
         if self.players_word:
             self.current_last_letter = self.players_word[-1]
             self.computed_word = eng_dict.get_word_matching_letter(self.current_last_letter)
 
         else:
             self.computed_word = eng_dict.get_random_word()
+
 
         # because computer has added its own word
         self.chain_count += 1
