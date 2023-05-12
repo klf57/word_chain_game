@@ -1,9 +1,9 @@
 import word_chaining as game
+import discord
 
 
-def main():
-    playgame = game.WordChainingGame()
-    playgame.start_game()
 
-
-main()
+if __name__ == '__main__':
+  playgame = game.WordChainingGame()
+  playgame.start_game()
+  
