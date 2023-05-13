@@ -52,6 +52,7 @@ class WordChainingGame:
                 # none checks if this is the initial round where no none value  is expected.
                 if self.players_word == None or self.computed_word[-1] == self.players_word[0]:
                     word_not_valid = False
+                    self.chain_count += 1 #player has connected a valid word, +1 to chain.
 
                 else:
                     print("first letter doesnt match previous word's last letter,game over")
